@@ -1,0 +1,2 @@
+-- Baseline migration for the application database.
+-- Domain schema is intentionally deferred to the selected product stories.

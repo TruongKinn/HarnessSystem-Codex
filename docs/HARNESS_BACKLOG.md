@@ -66,3 +66,35 @@ normal
 ### Status
 
 proposed
+
+## Missing Harness Capability
+
+### Title
+
+Native Windows Harness CLI release artifact.
+
+### Discovered While
+
+Making the installed Harness usable from Windows PowerShell on 2026-06-01.
+
+### Current Pain
+
+The installed `scripts/bin/harness-cli` command path received a Linux ELF
+binary. PowerShell selects that extensionless file and does not fall back to a
+Windows `.cmd` launcher, so Harness commands appear to run without useful
+output.
+
+### Suggested Improvement
+
+Publish `harness-cli-windows-x64.exe` and checksum assets with the release
+workflow, update installer platform detection to install the `.exe` on Windows,
+and keep the documented `scripts/bin/harness-cli` command usable from
+PowerShell.
+
+### Risk
+
+normal
+
+### Status
+
+accepted

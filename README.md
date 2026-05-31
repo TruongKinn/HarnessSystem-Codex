@@ -139,13 +139,47 @@ validation and harness maintenance expectations.
 
 ## Current State
 
-This repository is in Harness v0.
+This repository is in Harness v0 and now contains the initial application
+foundation for the Todo Kanban Calendar App.
 
-There is no application implementation and no baked-in product specification
-yet. The current work is the reusable project harness: the file structure,
-agent operating model, feature intake process, story templates, and validation
-expectations that help humans and agents turn a future user-provided spec into
-implementation work.
+The current application foundation includes:
+
+- `backend/`: Spring Boot Java 17 API scaffold using Maven, Actuator, Flyway,
+  JDBC, Validation, and PostgreSQL.
+- `compose.yaml`: local PostgreSQL and Keycloak services.
+- `docs/product/`: product contract derived from `SPEC.md`.
+- `docs/stories/`: story backlog and selected story packets.
+
+## Local Development
+
+Start local platform services:
+
+```bash
+docker compose up -d postgres keycloak
+```
+
+Run backend tests:
+
+```bash
+cd backend
+./mvnw test
+```
+
+Run the backend API:
+
+```bash
+cd backend
+./mvnw spring-boot:run
+```
+
+Health endpoint:
+
+```bash
+curl http://localhost:8080/actuator/health
+```
+
+Keycloak admin console is available at `http://localhost:8081` with local
+development credentials `admin` / `admin`.
 
 ## Product Sources
 

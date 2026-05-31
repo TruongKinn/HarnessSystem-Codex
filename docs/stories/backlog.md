@@ -21,7 +21,7 @@ the work is selected or when a product decision needs a durable place to land.
 
 | Story | Epic | Title | Lane | Notes |
 | --- | --- | --- | --- | --- |
-| US-001 | E01-foundation | Scaffold local development runtime and health checks | normal | Create when implementation begins |
+| US-001 | E01-foundation | Scaffold local development runtime and health checks | normal | In progress: `docs/stories/US-001-foundation-runtime-health.md` |
 | US-002 | E01-foundation | Create Spring Boot API shell with `/actuator/health` | normal | Depends on build tool choice |
 | US-003 | E01-foundation | Create Angular NG-ZORRO shell layout | normal | Include app layout only, no domain screens yet |
 | US-004 | E02-auth-access | Configure Keycloak and backend JWT validation path | high-risk | Auth hard gate |

@@ -27,6 +27,21 @@ file (`harness.db`) is `.gitignore`d.
 
 Requires: the prebuilt Rust CLI at `scripts/bin/harness-cli`.
 
+For local database viewing commands, see `docs/HARNESS_DB_VIEWING.md`.
+
+On Windows installs where the Rust binary is missing or incompatible, the
+repository may include `scripts/bin/harness-cli.cmd`, which dispatches to the
+Node fallback implementation at `scripts/bin/harness_cli.mjs`. The fallback uses
+Node's built-in SQLite support and writes the same local `harness.db`.
+PowerShell still supports the documented command form:
+
+```powershell
+scripts/bin/harness-cli query matrix
+```
+
+because Windows command resolution falls back to `.cmd` when no extensionless
+binary is present.
+
 Direct database inspection may still use SQLite tools, but normal Harness use
 should go through the Rust CLI.
 
@@ -172,3 +187,8 @@ native hosted runners, and upload these release assets:
 - `harness-cli-linux-x64.sha256`
 - `harness-cli-linux-arm64`
 - `harness-cli-linux-arm64.sha256`
+
+Windows release assets should be added before removing the fallback path:
+
+- `harness-cli-windows-x64.exe`
+- `harness-cli-windows-x64.exe.sha256`

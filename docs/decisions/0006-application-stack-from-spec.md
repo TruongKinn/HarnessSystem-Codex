@@ -25,6 +25,8 @@ Adopt the stack from `SPEC.md` for the initial buildout:
 - Social login: Google and GitHub through Keycloak identity providers.
 - API protection: Bearer JWT validated by the backend.
 - Database: PostgreSQL.
+- Build tool: Maven.
+- Database migration: Flyway.
 - Local runtime: Docker Compose.
 
 ## Alternatives Considered
@@ -42,7 +44,7 @@ Positive:
 - Foundation stories can be scoped concretely.
 - Product docs now have a stable technical baseline.
 - Future architecture decisions can focus on build tool, migration tool,
-  module boundaries, and deployment shape instead of reopening the core stack.
+  module boundaries, and deployment shape without reopening the core stack.
 
 Tradeoffs:
 
@@ -52,7 +54,5 @@ Tradeoffs:
 
 ## Follow-Up
 
-- Decide Maven vs Gradle.
-- Decide Flyway vs Liquibase.
 - Restore or replace `scripts/bin/harness-cli` with a binary that runs in the
   current Windows/WSL environment.

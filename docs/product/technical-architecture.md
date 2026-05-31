@@ -10,7 +10,8 @@
 | Auth provider | Keycloak |
 | Social identity | Google and GitHub through Keycloak |
 | Database | PostgreSQL |
-| Migration | Flyway or Liquibase; final choice is open |
+| Build tool | Maven |
+| Migration | Flyway |
 | API docs | OpenAPI / Swagger |
 | Backend tests | JUnit 5, Mockito, Testcontainers |
 | Frontend tests | Angular test runner plus Playwright E2E |
